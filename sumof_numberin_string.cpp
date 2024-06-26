@@ -12,6 +12,7 @@ int main()
     {
         sum+=i;
     }
+    
     cout<<sum<<endl;
     return 0;
 }
