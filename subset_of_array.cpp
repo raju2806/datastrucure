@@ -1,9 +1,33 @@
 #include<iostream>
+#include<algorithm>
+
 using namespace std;
 
-int subset(int arr[],int arr1[],int n, int m)
+string subset(int arr[],int arr1[],int n, int m)
 {
-    return 0;
+    sort(arr,arr+n);
+    sort(arr1, arr1+m);
+    
+    int i=0 ,j=0;
+
+    while(i<n && j<m)
+    {
+        if (arr[i] < arr1[j]) {
+            i++;
+        } else if (arr[i] == arr1[j]) {
+            i++;
+            j++;
+        } else {
+            return "No";
+        }
+    }
+
+    // If we have traversed all elements of a2, then it is a subset
+    if (j == m) {
+        return "Yes";
+    } else {
+        return "No";
+    }
 }
 
 int main()
@@ -24,7 +48,7 @@ int main()
         cin>>arr1[i];
     }
 
-    cout<<subset(arr,arr1,n,m);
+    cout<<subset(arr,arr1,n,m)<<endl;
 
     return 0;
 }
