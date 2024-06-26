@@ -1,4 +1,5 @@
 #include<bits/stdc++.h>
+#include<iostream>
 using namespace std;
 
 int main()
@@ -19,6 +20,5 @@ int main()
         }
         if(flag==0){cout<<i<<" ";}
     }
-    
     return 0;
 }
