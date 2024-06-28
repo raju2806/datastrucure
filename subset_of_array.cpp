@@ -12,16 +12,16 @@ string subset(int arr[],int arr1[],int n, int m)
 
     while(i<n && j<m)
     {
-        if (arr[i] < arr1[j]) {
-            i++;
-        } else if (arr[i] == arr1[j]) {
+        if (arr[i] == arr1[j]) {
             i++;
             j++;
+        } else if (arr[i] < arr1[j]) {
+            i++;
         } else {
             return "No";
         }
     }
-    
+
     if (j == m) {
         return "Yes";
     } else {
