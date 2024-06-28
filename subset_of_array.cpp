@@ -21,8 +21,7 @@ string subset(int arr[],int arr1[],int n, int m)
             return "No";
         }
     }
-
-    // If we have traversed all elements of a2, then it is a subset
+    
     if (j == m) {
         return "Yes";
     } else {

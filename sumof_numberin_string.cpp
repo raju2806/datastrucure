@@ -5,14 +5,9 @@ using namespace std;
 int main()
 {
     string s;
-    getline(cin,s);
-    int n=s.length(),sum=0;
-    int num =stoi(s);
-    for(int i=0; i<=n; i++)
-    {
-        sum+=i;
-    }
-    
+    cin>>s;
+    int sum=0;
+    for(auto x : s){sum+=x-'0';}
     cout<<sum<<endl;
     return 0;
 }
