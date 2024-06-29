@@ -17,7 +17,6 @@ int main() {
     int arr[k];
     for(int i=0; i<k; i++){cin>>arr[i];}
     int n = sizeof(arr)/sizeof(int);
-    cout<<n<<endl;
     cout << maxsimum(arr,0,n) <<" " <<endl;         
     return 0;
 }
